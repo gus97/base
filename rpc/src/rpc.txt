@@ -1,0 +1,15 @@
+TCP握手和断开及有限状态机
+backlog
+BIO NIO
+阻塞/非阻塞的区别、同步/异步的区别
+阻塞IO、非阻塞IO、多路复用IO、异步IO
+Reactor线程模型
+jdk的poll、epoll与底层poll、epoll的对接实现
+Netty自己的epoll实现
+内核层poll、epoll的大致实现
+epoll的边缘触发和水平触发
+Netty的EventLoopGroup设计
+Netty的ByteBuf设计
+Netty的ChannelHandler
+Netty的零拷贝
+Netty的线程模型，特别是与业务线程以及资源释放方面的理解
