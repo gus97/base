@@ -6,13 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ai" />
+        <module name="bigdata" />
         <module name="distributed" />
+        <module name="j8" />
+        <module name="kotlin" />
+        <module name="pkserver" />
+        <module name="rpc" />
         <module name="spring-boot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="ai" target="1.8" />
       <module name="base" target="1.5" />
+      <module name="bigdata" target="1.5" />
       <module name="distributed" target="1.5" />
+      <module name="j8" target="1.8" />
+      <module name="kotlin" target="1.8" />
+      <module name="pkserver" target="1.8" />
+      <module name="rpc" target="1.8" />
       <module name="spring-boot" target="1.8" />
     </bytecodeTargetLevel>
   </component>

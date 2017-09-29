@@ -32,15 +32,12 @@ public class BootStart implements EmbeddedServletContainerCustomizer {
     public void customize(ConfigurableEmbeddedServletContainer container) {
 
         TomcatEmbeddedServletContainerFactory tomcatFactory = (TomcatEmbeddedServletContainerFactory) container;
-        tomcatFactory.addConnectorCustomizers(new TomcatConnectorCustomizer() {
-            @Override
-            public void customize(Connector connector) {
-                Http11NioProtocol protocol = (Http11NioProtocol) connector.getProtocolHandler();
+        tomcatFactory.addConnectorCustomizers((TomcatConnectorCustomizer) connector -> {
+            Http11NioProtocol protocol = (Http11NioProtocol) connector.getProtocolHandler();
 
-                protocol.setMaxConnections(2000);
-                protocol.setMaxThreads(2000);
-                protocol.setConnectionTimeout(30000);
-            }
+            protocol.setMaxConnections(2000);
+            protocol.setMaxThreads(2000);
+            protocol.setConnectionTimeout(30000);
         });
     }
 }

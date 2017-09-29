@@ -4,6 +4,7 @@ import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,6 +27,15 @@ public class HttpService {
     private DataSource ds;
 
 
+    @RequestMapping("/test")
+    @ResponseBody
+    String test(@RequestBody String sb){
+
+        System.out.println(sb);
+        return "ok";
+    }
+
+
     @RequestMapping("/home")
     @ResponseBody
     String home() throws SQLException {
@@ -42,8 +52,6 @@ public class HttpService {
                         }
                     }
         		}).start();
-
-
 
 
 

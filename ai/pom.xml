@@ -9,13 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rpc</artifactId>
+    <artifactId>ai</artifactId>
+
 
     <dependencies>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.15.Final</version>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.8</version>
         </dependency>
     </dependencies>
 
@@ -35,11 +36,11 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>netty.http.HttpServer</mainClass>
-                        </manifest>
-                    </archive>
+                    <!--<archive>-->
+                        <!--<manifest>-->
+                            <!--<mainClass>cn.gus.fg.FineGrained</mainClass>-->
+                        <!--</manifest>-->
+                    <!--</archive>-->
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
@@ -54,7 +55,31 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <version>2.15.2</version>
+                <executions>
+                    <execution>
+                        <id>scala-compile-first</id>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>**/*.scala</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>scala-test-compile</id>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 </project>

@@ -41,10 +41,16 @@
             <version>5.1.44</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+
 
     </dependencies>
     <build>
-        <sourceDirectory>src</sourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

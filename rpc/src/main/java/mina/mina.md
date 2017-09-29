@@ -29,7 +29,7 @@ Or, if you prefer, __use two underscores instead__.
 * Gum.
 * Booze.
 
-This is an [example link](http://example.com/).
+This is an [原文连接] (http://example.com/)
 
 
 <p>这是一个普通段落：</p>
@@ -46,3 +46,49 @@ package kafka.admin
   */
 case class BrokerMetadata(id: Int, rack: Option[String])
 </code></pre>
+
+
+I strongly recommend against using any `<blink>` tags.
+
+I wish SmartyPants used named entities like `dddd`
+instead of decimal-encoded entites like `&#8212;`.
+
+4. 表格
+
+格式如下：
+
+行名居中，数据居左
+
+| Tables | Are | Cool |
+| ------ |-------| -----|
+| col 3 is | right-aligned | $1600 |
+| col 2 is | centered | $12 |
+| zebra stripes | are neat | $1 |
+
+行名居中，数据居中
+
+| Tables | Are | Cool |
+| :-----: |:-------:| :-----:|
+| col 3 is | right-aligned | $1600 |
+| col 2 is | centered | $12 |
+| zebra stripes | are neat | $1 |
+
+行名居左，数据居左
+
+| Tables | Are | Cool |
+| :------ |:-------| :-----|
+| col 3 is | right-aligned | $1600 |
+| col 2 is | centered | $12 |
+| zebra stripes | are neat | $1 |
+
+行名居右，数据居右
+
+| Tables | Are | Cool |
+| ------: |-------:| -----:|
+| col 3 is | right-aligned | $1600 |
+| col 2 is | centered | $12 |
+| zebra stripes | are neat | $1 |
+
+注：两边的竖线可有可无，但是要有都有，要无都无。<123456789@163.com>
+
+
